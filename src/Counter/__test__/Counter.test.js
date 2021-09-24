@@ -23,3 +23,10 @@ test('subtract button renders with -', () => {
 
   expect(addBtnEl.textContent).toBe('-');
 });
+
+test('add button renders with +', () => {
+  const { getByTestId } = render(<Counter />);
+  const addBtnEl = getByTestId('add-btn');
+
+  expect(addBtnEl.textContent).toBe('+');
+});
