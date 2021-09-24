@@ -30,3 +30,10 @@ test('add button renders with +', () => {
 
   expect(addBtnEl.textContent).toBe('+');
 });
+
+test('input contains initial value of 1', () => {
+  const { getByTestId } = render(<Counter />);
+  const inputEl = getByTestId('input');
+
+  expect(inputEl.value).toBe('1');
+});
