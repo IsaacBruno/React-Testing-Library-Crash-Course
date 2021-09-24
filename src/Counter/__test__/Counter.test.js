@@ -16,3 +16,10 @@ test('counter initially start with text of 0', () => {
 
   expect(counterEl.textContent).toBe('0');
 });
+
+test('subtract button renders with -', () => {
+  const { getByTestId } = render(<Counter />);
+  const addBtnEl = getByTestId('subtract-btn');
+
+  expect(addBtnEl.textContent).toBe('-');
+});
