@@ -8,6 +8,7 @@ function Counter() {
       <h3 data-testid="header">My Counter</h3>
       <h2 data-testid="counter">{counterValue}</h2>
       <button data-testid="subtract-btn">-</button>
+      <button data-testid="add-btn">+</button>
     </div>
   );
 }
