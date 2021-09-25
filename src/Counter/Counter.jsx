@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import './Counter.css';
 
 function Counter() {
-  const [counterValue, setCounterValue] = useState(0)
-  const [inputValue, setInputValue] = useState(1)
+  const [counterValue, setCounterValue] = useState(0);
+  const [inputValue, setInputValue] = useState(1);
+
+  const addToCounter = () => {
+    setCounterValue(counterValue + inputValue);
+  };
 
   return (
     <div>
@@ -19,7 +23,10 @@ function Counter() {
           setInputValue(e.target.value);
         }}
       />
-      <button data-testid="add-btn">+</button>
+      <button
+        data-testid="add-btn"
+        onClick={addToCounter}
+      >+</button>
     </div>
   );
 }
