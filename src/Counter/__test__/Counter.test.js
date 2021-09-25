@@ -52,3 +52,15 @@ test('change value of input works correctly', () => {
 
   expect(inputEl.value).toBe('5');
 });
+
+test('click on plus button adds 1 to counter', () => {
+  const { getByTestId } = render(<Counter />);
+  const addBtnEl = getByTestId('add-btn');
+  const counterEl = getByTestId('counter');
+
+  expect(counterEl.textContent).toBe('0');
+  
+  fireEvent.click(addBtnEl);
+
+  expect(counterEl.textContent).toBe('1');
+});
